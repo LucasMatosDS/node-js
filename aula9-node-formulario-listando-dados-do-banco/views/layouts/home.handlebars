@@ -1,0 +1,10 @@
+<form>
+  <h1>listando dados do banco de dados:</h1>
+  {{#each posts}}
+  <!--(createdAT)exibe o horário da criação da postagem-->
+  <p>{{createdAt}}</p>
+    <h2>{{titulo}}</h2>
+    <p>{{conteudo}}</p>
+    <hr>
+  {{/each}}
+</form>

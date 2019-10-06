@@ -1,0 +1,69 @@
+<style>
+
+ table,th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+th, td{
+  padding: 15px;
+}
+
+#btn1{
+  margin-top: 4px;
+}
+
+#btn1:hover{
+  background-color: red;
+  color: white;
+}
+
+#btn2{
+  margin-left: 4px;
+}
+
+#btn2:hover{
+  background-color: green;
+  color: white;
+}
+
+.conteudo{
+  margin: auto;
+  text-align: center;
+}
+.navbar{
+  background-color: gray;
+  padding-bottom: 10px;
+  color: white;
+}
+
+hr{
+  width: 800px;
+}
+
+</style>
+
+<div class="navbar">
+  <u><h3>Navegação</h3></u>
+  <!--linkando o botão a rota cad e passando por parametro o id-->
+    <a href="/cad"><button id="btn2">Cadastro</button></a>
+</div>
+<div class="conteudo">
+  <h1>lista de dados:</h1>
+  {{#each posts}}
+  <table>
+    <tr>
+      <th>Titulo</th>
+        <th>Conteúdo</th>
+    </tr>
+    <tr>
+      <td>{{titulo}}</td>
+      <td>{{conteudo}}</td>
+    </tr>
+  </table>
+    <!--linkando o botão a rota del e passando por parametro o id-->
+      <a href="/del/{{id}}"><button id="btn1">Deletar</button></a>
+    <hr>
+  {{/each}}
+</div>

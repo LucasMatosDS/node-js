@@ -1,0 +1,10 @@
+<!-- se existir uma msg de sucesso faça algo. -->
+<!-- variaveis success_msg e error_msg pego do arquivo aula18.js -->
+{{#if success_msg}}
+<div class="alert alert-success">{{success_msg}}</div>
+{{/if}}
+
+<!-- se existir uma mensagem de erro faça algo. -->
+{{#if error_msg}}
+<div class="alert alert-danger">{{error_msg}}</div>
+{{/if}}
